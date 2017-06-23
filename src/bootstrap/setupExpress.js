@@ -5,15 +5,19 @@ export default function(state) {
 
   const {
     multerMiddleware,
-    jwtMiddleware
+    jwtMiddleware,
+    corsMiddleware,
   } = state;
 
   const expressServer = new express();
 
+  expressServer.options('*', corsMiddleware);
+
   expressServer.post('/upload',
+    corsMiddleware,
     jwtMiddleware,
     multerMiddleware.single('blob'),
-    uploadPostHandler);
+    (req, res, next) => uploadPostHandler(state, req, res, next));
 
   return {
     ...state,

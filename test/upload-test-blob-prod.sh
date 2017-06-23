@@ -1,0 +1,1 @@
+curl -F "blob=@./blob.jpeg" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjbG91ZHBpZXIiLCJpYXQiOjE0ODE2NTAyMjcsImV4cCI6MTUxMzE4NjIyNywiYXVkIjoiIiwic3ViIjoiIiwiY2xpZW50IjoiY2xvdWRwaWVyLWJsb2ItZ2F0ZXdheS10ZXN0In0.-JzvGm1_JUdxb1AwpNejXb8TL97RvTwmJxu6F_W5JCQ" https://blobs.cloudpier.net/upload

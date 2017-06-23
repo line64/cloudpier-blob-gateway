@@ -1,5 +1,6 @@
 import setupBunyan from './setupBunyan';
 import setupS3 from './setupS3';
+import setupCORS from './setupCORS';
 import setupMulter from './setupMulter';
 import setupJWT from './setupJWT';
 import setupExpress from './setupExpress';
@@ -11,6 +12,7 @@ export default function (config) {
 
   state = setupBunyan(state);
   state = setupS3(state);
+  state = setupCORS(state);
   state = setupMulter(state);
   state = setupJWT(state);
   state = setupExpress(state);

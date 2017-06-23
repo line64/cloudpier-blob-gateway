@@ -10,7 +10,7 @@ export default function (bearer, body, file) {
     handle
   } = body;
 
-  tenant = tenant || 'unknown';
+  tenant = tenant || 'notenant';
   handle = handle || cuid();
 
   return `${tenant}/${handle}`;
